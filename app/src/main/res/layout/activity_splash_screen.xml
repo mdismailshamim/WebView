@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen">
+    <TextView
+        android:layout_above="@+id/splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome back, Chief"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textSize="30dp"
+        android:textColor="@color/softBlack"/>
+    <ImageView
+        android:id="@+id/splash"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/splash_screen"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"/>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_below="@+id/splash"
+        android:layout_width="300dp"
+        android:layout_height="10dp"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_centerHorizontal="true"
+        android:max="100"
+        android:progress="0"
+        android:indeterminate="true"/>
+    <ProgressBar
+        android:id="@+id/rotateProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateDrawable="@drawable/rotate_progress"
+        android:indeterminate="true"
+        android:progress="0"
+        android:max="100"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

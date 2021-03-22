@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/sRl_id">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/progress_id"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:progress="20"
+            android:layout_marginTop="-2dp"
+            android:layout_marginBottom="-2dp"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:visibility="gone"/>
+        <WebView
+            android:layout_below="@+id/progress_id"
+            android:id="@+id/webView_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <RelativeLayout
+            android:id="@+id/relativeLayout_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <ImageView
+                android:id="@+id/image_id"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/signal_searching"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"/>
+            <TextView
+                android:id="@+id/text_id"
+                android:layout_below="@+id/image_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No internet connection"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"/>
+            <Button
+                android:id="@+id/retry_id"
+                android:layout_below="@+id/text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retry"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/white"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
